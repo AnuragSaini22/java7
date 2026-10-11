@@ -1,0 +1,1 @@
+public class Q27_Thread_Join { public static void main(String[] args) throws InterruptedException { Thread first=new Thread(()->{for(int i=1;i<=3;i++)System.out.println("First thread "+i);}); Thread second=new Thread(()->System.out.println("Second thread starts after first finishes")); first.start();first.join();second.start(); } }

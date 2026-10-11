@@ -1,0 +1,1 @@
+public class Q24_Two_Threads_Scheduling { public static void main(String[] args){ Runnable task=()->{for(int i=1;i<=5;i++)System.out.println(Thread.currentThread().getName()+" prints "+i);}; new Thread(task,"Thread-A").start(); new Thread(task,"Thread-B").start(); } }

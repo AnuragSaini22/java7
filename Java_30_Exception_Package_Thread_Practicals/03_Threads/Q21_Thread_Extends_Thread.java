@@ -1,0 +1,1 @@
+public class Q21_Thread_Extends_Thread { static class MessageThread extends Thread { public void run(){for(int i=1;i<=5;i++)System.out.println(getName()+": message "+i);} } public static void main(String[] args){new MessageThread().start();} }

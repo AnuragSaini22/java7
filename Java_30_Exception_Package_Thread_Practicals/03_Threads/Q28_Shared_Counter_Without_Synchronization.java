@@ -1,0 +1,1 @@
+public class Q28_Shared_Counter_Without_Synchronization { static int counter=0; public static void main(String[] args) throws InterruptedException { Runnable task=()->{for(int i=0;i<100000;i++)counter++;}; Thread a=new Thread(task),b=new Thread(task);a.start();b.start();a.join();b.join();System.out.println("Expected 200000; actual without synchronization = "+counter); } }
